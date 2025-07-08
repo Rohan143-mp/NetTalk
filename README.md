@@ -73,18 +73,6 @@ Server: A server is a system (hardware or software) program running to provide t
 
 Port: Port is a software mechanism that allows the centralized connected Servers to listen for requests made by clients. Port is actually purposed as a gateway to listen for the requested parameters by the server terminals or other machines. It is a software address on a system that is on the security network. Entire request response proceeding among this Application is carries through machine ports. 
 
-# Output
-
-<img src="img/1.png" >
-<img src="img/2.png" >
-<img src="img/3.png" >
-<img src="img/4.png" >
-<img src="img/5.png" >
-<img src="img/6.png" >
-<img src="img/7.png" >
-<img src="img/8.png" >
-				
-
 /**
  * 
  * @author Rohan M Pednekar
