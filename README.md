@@ -1,6 +1,5 @@
 # 💬 NetTalk
-# 💬 Chat Server Application Using Java Swing & Sockets
-
+Chat Server Application Using Java Swing & Sockets
 A secure, multi-client **chat server application** developed using Java Swing, socket programming, and multithreading. This client-server architecture facilitates two-way communication between multiple clients over TCP, with a graphical interface for both server and client.
 
 ---
