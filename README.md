@@ -1,15 +1,45 @@
-# Chat-Server-Application-Using-JAVA-Swing-Socket-Swing (With analysis Report)
-Socket programming is a way of connecting two nodes on a network to communicate with each other. One socket(node) listens on a particular port at an IP, while other socket reaches out to the other to form a connection. Server forms the listener socket while client reaches out to the server.
+# 💬 NetTalk
+# 💬 Chat Server Application Using Java Swing & Sockets
 
-# INTRODUCTION
-Several network systems are built to communicate with one another and are made available through service-oriented architectures. In this project, we use the client-server architecture to develop a secured Client-Server chat application. A chat application is created based on Transmission Control Protocol (TCP) where TCP is connection oriented protocol and in the end, multithreading is used to develop the application. 
+A secure, multi-client **chat server application** developed using Java Swing, socket programming, and multithreading. This client-server architecture facilitates two-way communication between multiple clients over TCP, with a graphical interface for both server and client.
+
+---
+
+## 📖 Introduction
+
+This project implements a **Client-Server Chat Application** using Java's `Socket` and `ServerSocket` APIs. The server runs continuously, accepting multiple client connections. Each client can send and receive real-time messages via a shared server.
 
 
-A client-server chat application consists of a Chat Client and a Chat Server and there exists a two way communication between them. Here, Message Processor is used to interpret message from the user, Message Interpreter is used to extract and pass the received message. Message Maker is used to construct back the message and Client Manager is used to maintain the clients list which the sender and receiver at both sides use to interact with each other. 
+## Project Structure 
 
-In general, the server process will start on some computer system; in fact, the server should be executed before the client. Server usually initializes itself, and then goes to wait state or sleep state where it will wait for a client request. After that, a client process can start on either the same machine or on some other machine. Whenever the client wants some service from the server, it will send a request to the server and the server will accept the request and process it. After the server has finished providing its service to the client, the server will again go back to sleep, that is, waiting for the next client request to arrive. This process is repeated as long as the server processes is running. Whenever such request comes, the server can immediately serve the client and again go back to the waiting state for the next request to arrive. 
+ChatServerApp/
+├── src/
+│   ├── server/
+│   │   ├── ChatServer.java
+│   │   ├── ClientHandler.java
+│   ├── client/
+│   │   ├── ChatClient.java
+│   │   ├── ClientUI.java
+├── img/
+│   ├── 1.png to 8.png
 
 
+> The project demonstrates core concepts of:
+- TCP/IP networking
+- Thread-based concurrency
+- Java Swing GUI components
+
+---
+
+## ⚙️ Technologies Used
+
+- 💻 **Java SE**
+- 🧵 **Multithreading**
+- 📡 **TCP Sockets (Socket & ServerSocket)**
+- 🖼️ **Java Swing (GUI)**
+- 📂 **NetBeans / IntelliJ IDEA compatible**
+
+-
 # BACKGROUND OF THE STUDY 
 Client server model is the standard model which has been accepted by many for developing security network applications. In this model, there is a notion of client and notion of server. 
 
@@ -43,112 +73,87 @@ Server: A server is a system (hardware or software) program running to provide t
 
 Port: Port is a software mechanism that allows the centralized connected Servers to listen for requests made by clients. Port is actually purposed as a gateway to listen for the requested parameters by the server terminals or other machines. It is a software address on a system that is on the security network. Entire request response proceeding among this Application is carries through machine ports. 
 
-Security network: This refers to a system were computers are linked to share software, data, hardware and resources for the benefit of users. 
-
-Interface: This may be software or hardware that upon an agreed method spells out the manner a system component can exchange information with another system component. 
-
-Secure socket layer (SSL): This refers to Secure Sockets Layer protocol that is used for encryption of data for secure data transmission. 
-
-IP: This refers to Internet Protocol; it is the reasonable security network address of device on a security network. It is notational called dotted-decimal (for instance: 127.0.0.1). 
-
-
-SWING (GUI Component): Swing is a GUI widget toolkit for Java. It is part of Oracle's Java Foundation Classes – an API for providing a graphical user interface for Java programs. Swing was developed to provide a more sophisticated set of GUI components than the earlier Abstract Window Toolkit.
-
-
 # Output
 
-<img src="./ChatServer/img/1.png" >
-<img src="./ChatServer/img/2.png" >
-				<img src="./ChatServer/img/3.png" >
-				<img src="./ChatServer/img/4.png" >
-				<img src="./ChatServer/img/5.png" >
-				<img src="./ChatServer/img/6.png" >
-				<img src="./ChatServer/img/7.png" >
-				<img src="./ChatServer/img/8.png" >
+<img src="img/1.png" >
+<img src="img/2.png" >
+<img src="img/3.png" >
+<img src="img/4.png" >
+<img src="img/5.png" >
+<img src="img/6.png" >
+<img src="img/7.png" >
+<img src="img/8.png" >
 				
 
-
-## Copyright @soumyadip007
-```shell
 /**
  * 
- * @author Soumyadip Chowdhury
- * @github soumyadip007
+ * @author Rohan M Pednekar
+ * @github Rohan143-mp
+
  *
  */
 
-```
-Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file.
-# #Java Software (AWT/Swing/JavaFx/JDBC)
 
-- [Java Swing 4 Projects Book selling system,Stadium Management,Chatbot etc](https://github.com/soumyadip007/Java-JavaFx-Swing-Projects-Desktop-Application-GUI-Software)
+### Key Components:
+- **Message Processor**: Parses messages from the sender.
+- **Message Interpreter**: Extracts and routes messages.
+- **Message Maker**: Constructs messages to send.
+- **Client Manager**: Maintains active users and their info.
 
-- [School Management System Software](https://github.com/soumyadip007/School-Management-System-GUI-Software-Using-Java-Swing-AWT-JDBC-JTatoo-MySql)
+---
 
-- [Java Swing Complete tutorial with example for JavaGuides.net](https://github.com/soumyadip007/Java-Swing-tutorials-and-examples-for-JavaGuides.net)
+## 🧪 How It Works
 
+1. **Server Execution**:
+   - Starts and listens on a specified port.
+   - Accepts incoming client requests.
+   - Maintains a live list of connected clients.
 
-# #J2EE (JSP/Servlet/JSTL/JDBC Projects)
+2. **Client Execution**:
+   - Sends a username to register with the server.
+   - Communicates with other clients via the server.
 
-- [E-Market Place OLX-Clone](https://github.com/soumyadip007/E-Marketplace-for-buying-and-reselling-products-Web-Project-Using-JSP-Servlet-Jstl-Security-Jdbc)
+---
 
-- [Startup Company Live Website](https://soumyadip007.github.io/Coding_Liquids-StartUp-Company-Live-Website-Using-JSP-Servlet-JSTL-Security-JDBC-MD5-MySql-Bootstrap/)
+## 🖥️ Screenshots
 
-- [Post-Disaster Management & Women Safety Project](https://github.com/soumyadip007/Post-Disaster-Management-and-Women-safety-Hackathon-JSP-Servlet-MySql-Bootstrap-GoogleMapApi-OSM)
+| Server GUI | Client Login | Chat Window |
+|------------|--------------|-------------|
+| ![Server](img/1.png) | ![Login](img/2.png) | ![Chat](img/3.png) |
+| ![Msg Sent](img/4.png) | ![Msg Received](img/5.png) | ![Connected Clients](img/6.png) |
+| ![Exit Screen](img/7.png) | ![Message Log](img/8.png) |
 
-- [Aim-India-Foundation-NGO-Live-Website](Aim-India-Foundation-WebDev-Internship-Using-Jsp-Servlet-Jstl-Jdbc-MySql-Bootstrap)
+---
 
-- *https://Lightningspeedmatchmaker.com* (in Private repo for security/commercial purposes,USA project)
+## 📚 Definitions
 
+| Term | Description |
+|------|-------------|
+| **Socket** | Endpoint for communication between two machines. |
+| **TCP** | Connection-oriented protocol ensuring reliable delivery. |
+| **Client** | Initiates communication with the server. |
+| **Server** | Waits for client requests and responds. |
+| **Port** | A communication endpoint. |
+| **Swing** | GUI toolkit for Java. |
 
-# #Spring & Hibernte (Codes & Projects)
+---
 
-- [Spring-Core-XML-Data-Dependency-BeanScope-BeanLifecycle](https://github.com/soumyadip007/Spring-Core-XML-Data-Dependency-BeanScope-BeanLifecycle)
+## 🔐 Security Concepts
 
-- [Spring-Core-Annotation](https://github.com/soumyadip007/Spring-Core-Annotation-BeanScope-BeanLifecycle)
+- **SSL (Secure Sockets Layer)** can be optionally implemented for secure data transmission.
+- **IP & Port Management** ensures logical addressing and communication routing.
 
-- [Hibernate-ORM (All)](https://github.com/soumyadip007/Hibernate-ORM-Entity-Relations)
+---
 
-- [Spring-MVC-Request-Mapping-Validation](https://github.com/soumyadip007/Spring-MVC-Request-Mapping-Validation)
+## 🚀 How to Run
 
-- [Customer-Tracker-CURD-Application-Using-Spring-MVC-Hibernate (Mini-Project)](https://github.com/soumyadip007/Customer-Tracker-CURD-Application-Using-Spring-MVC-Hibernate)
+### 🧱 Prerequisites
 
-- [Spring-Security-User-Login-Authentication-Application-JDBC-Bcrypt](https://github.com/soumyadip007/Spring-Security-User-Login-Authentication-Application-JDBC-Bcrypt)
+- JDK 8 or later
+- Java IDE (IntelliJ IDEA, NetBeans, Eclipse)
 
-- [Spring-Security-Authentication-System-Registration-Login-with-OTP-Token-and-Email-verification (Mini Project)](https://github.com/soumyadip007/Spring-Security-Authentication-System-Reg-Login-with-OTP-Token-and-Email-verification)
+### 🔧 Setup Steps
 
-- [SpringRest-Restfull-Webserices-Jackson-Json-Data-Binding-MVC](https://github.com/soumyadip007/Spring-Rest-Jackson-Json-Data-Binding)
-
-- [Customer-Relationship-Management-Real-time-CURD-Application-using-Spring-Rest-Json-HQL-WebServices-MVC (Mini Project)](https://github.com/soumyadip007/Customer-Relationship-Management-Real-time-CURD-Application-using-Spring-Rest-Json-HQL-WebServices)
-
-- [Spring-Boot-with-Restfull-Webservices-Json-Hibernate-JPA-Spring-Data](https://github.com/soumyadip007/Spring-Boot-with-Rest-Json-Hibernate-JPA-SpringDataJPA)
-
-- [Employee-Relationship-CURD-Application-using-Spring-Boot-Thymeleaf-Hibernate-JPA-MVC (Mini Project)](https://github.com/soumyadip007/Employee-Relationship-CURD-Application-using-Spring-Boot-Thymeleaf-Hibernate-JPA-MVC)
-
-- [E-Medical-System (Project)](https://github.com/soumyadip007/E-Medical-System-Web-Project-Using-Spring-Boot-Security-MVC-Hibernate-JPA-Rest-Thymeleaf-HQL)
-
-- [SpringBoot-Angular8-Login-Registration](https://github.com/soumyadip007/SpringBoot-Angular8-Login-Registration-for-JavaGuides.net)
-
-- *Pujo Direction* (Android/WEB(Spring Boot, MVC, REST, Security, Hibernate, JPA, Thymeleaf) http://pujodir.cloudjiffy.net/Pujo-Direction(App Store)) (in Private repo for security purposes)
-
-# #Angular8 (Codes & Projects)
-
-- [Angular8-Data-Event-Binding-Directives-Pipes-Form-Validation-Security-HTTP-Service-Routing](https://github.com/soumyadip007/Angular-8-Data-Event-Binding-Directives-Pipes-Form-Validation-Security-HTTP-Service-Routing)
-
-- [Angular-Firebase-CURD-Application](https://github.com/soumyadip007/Angular-Firebase-CURD)
-
-- [Angular8-Authentication-and-Authorization-JSON-JWT (Security)](https://github.com/soumyadip007/Angular-8-Authentication-and-Authorization-JSON-JWT)
-
-- [Angular8 & Redux](https://github.com/soumyadip007/Angular-8-Redux)
-
-- [Shopping-Cart-System-using-Angular-8-Auth-Module-Firebase (Mini Project)](https://github.com/soumyadip007/Shopping-Cart-System-using-Angular-8-Auth-Module-Firebase)
-
-- [SpringBoot-Angular8-Login-Registration](https://github.com/soumyadip007/SpringBoot-Angular8-Login-Registration-for-JavaGuides.net)
-
-# #Other Works
-
-- [DBJ.jar (Framework for JDBC/On progress)](https://github.com/soumyadip007/DBJ.jar)
-
-- [Ofline Route Builder & DTN (On progress)](https://github.com/soumyadip007/Offline-Route-Builder-DTN-Messenger-Android-GPS-OSM)
-
-# #Wiki: https://github.com/soumyadip007/E-Medical-System-Web-Project-Using-Spring-Boot-Security-MVC-Hibernate-JPA-Rest-Thymeleaf-HQL/wiki
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/Chat-Server-App.git
