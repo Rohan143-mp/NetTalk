@@ -73,15 +73,6 @@ Server: A server is a system (hardware or software) program running to provide t
 
 Port: Port is a software mechanism that allows the centralized connected Servers to listen for requests made by clients. Port is actually purposed as a gateway to listen for the requested parameters by the server terminals or other machines. It is a software address on a system that is on the security network. Entire request response proceeding among this Application is carries through machine ports. 
 
-/**
- * 
- * @author Rohan M Pednekar
- * @github Rohan143-mp
-
- *
- */
-
-
 ### Key Components:
 - **Message Processor**: Parses messages from the sender.
 - **Message Interpreter**: Extracts and routes messages.
@@ -140,8 +131,13 @@ Port: Port is a software mechanism that allows the centralized connected Servers
 - JDK 8 or later
 - Java IDE (IntelliJ IDEA, NetBeans, Eclipse)
 
-### 🔧 Setup Steps
+### 🔧Owner
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/Chat-Server-App.git
+/**
+ * 
+ * @author Rohan M Pednekar
+ * @github Rohan143-mp
+
+ *
+ */
+
