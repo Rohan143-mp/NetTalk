@@ -11,7 +11,6 @@ This project implements a **Client-Server Chat Application** using Java's `Socke
 
 
 ## Project Structure 
-
 ChatServerApp/
 ├── src/
 │   ├── server/
@@ -51,7 +50,6 @@ A chat application is basically a combination of two applications:
 
 Server application runs on the server computer and client application runs on the client computer (or the machine with server). In this chat application, a client can send data to anyone who is connected to the server. 
 Python application programming interface (API) provides the classes for creating sockets to facilitate program communications over the security network. Sockets are the endpoints of logical connections between two hosts and can be used to send and receive data. Python treats socket communications much as it treat input and output operations; thus programs can read from or write to sockets as easily as they can read from or write to files. 
-
 
 To establish a server connection, a server socket needs to be created and attached to a port, which is where the server listens for connections. The port recognizes the Transmission Control Protocol service on the socket. For instance, the email server runs on port 25, and the web server usually runs on port 8080. 
 
